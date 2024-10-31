@@ -47,7 +47,7 @@ TagManager:
   - name: Platforms
     uniqueID: 3816984243
     locked: 0
-  - name: New Layer 3
+  - name: Player
     uniqueID: 1701934657
     locked: 0
   m_RenderingLayers:
