@@ -5,6 +5,7 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] float runSpeed = 10f;
     [SerializeField] float jumpSpeed = 8f;
+    [SerializeField] float climbSpeed = 5f;
     // This is a bad implementation since if the scale of player is changed
     // we need to change this value os well
     int scale = 5;
@@ -14,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody2D playerRigidBody;
     Animator playerAnimator;
     CapsuleCollider2D playerCapsuleCollider;
+    float gravityScaleAtStart;
 
     void Start()
     {
@@ -21,19 +23,20 @@ public class PlayerMovement : MonoBehaviour
         playerRigidBody = GetComponent<Rigidbody2D>();       
         playerAnimator = GetComponent<Animator>();
         playerCapsuleCollider = GetComponent<CapsuleCollider2D>();
+        gravityScaleAtStart = playerRigidBody.gravityScale;
     }
 
     void Update()
     {
        Run(); 
        FlipSprite();
+       ClimbLadder();
     }
 
     void OnMove(InputValue value) 
     {
         // Get inputs from PlayerInput component
         moveInput = value.Get<Vector2>();
-        Debug.Log(moveInput);
     }
 
     void OnJump(InputValue value) 
@@ -66,5 +69,22 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.localScale = new Vector2(Mathf.Sign(playerRigidBody.linearVelocity.x) * scale, scale);
         }
+    }
+
+    void ClimbLadder()
+    {
+        if (!playerCapsuleCollider.IsTouchingLayers(LayerMask.GetMask("Climbing")))
+        {
+            playerRigidBody.gravityScale = gravityScaleAtStart;
+            playerAnimator.SetBool("IsClimbing", false);
+            return;
+        }
+
+        Vector2 climbVelocity = new Vector2(playerRigidBody.linearVelocity.x, moveInput.y * climbSpeed);
+        playerRigidBody.linearVelocity = climbVelocity;
+        playerRigidBody.gravityScale = 0f;
+
+        bool playerHasVerticalSpeed = Mathf.Abs(playerRigidBody.linearVelocity.y) > Mathf.Epsilon;
+        playerAnimator.SetBool("IsClimbing", playerHasVerticalSpeed);
     }
 }
