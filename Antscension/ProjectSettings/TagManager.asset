@@ -13,8 +13,8 @@ TagManager:
   - UI
   - Ground
   - Climbing
-  - 
-  - 
+  - Bouncing
+  - Enemies
   - 
   - 
   - 
@@ -49,6 +49,9 @@ TagManager:
     locked: 0
   - name: Climbing
     uniqueID: 1677150701
+    locked: 0
+  - name: Enemies
+    uniqueID: 2896254151
     locked: 0
   - name: Player
     uniqueID: 1701934657
