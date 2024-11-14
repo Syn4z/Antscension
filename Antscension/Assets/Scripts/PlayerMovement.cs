@@ -6,6 +6,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float runSpeed = 10f;
     [SerializeField] float jumpSpeed = 8f;
     [SerializeField] float climbSpeed = 5f;
+    [SerializeField] Vector2 deathKick = new Vector2(10f, 10f);
+
     // This is a bad implementation since if the scale of player is changed
     // we need to change this value os well
     int scale = 5;
@@ -17,6 +19,8 @@ public class PlayerMovement : MonoBehaviour
     CapsuleCollider2D playerBodyCollider;
     BoxCollider2D playerFeetCollider;
     float gravityScaleAtStart;
+
+    bool isAlive = true;
 
     void Start()
     {
@@ -30,20 +34,25 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-       Run(); 
-       FlipSprite();
-       ClimbLadder();
+        if (!isAlive) { return; }
+        Run(); 
+        FlipSprite();
+        ClimbLadder();
+        Die();
     }
 
     void OnMove(InputValue value) 
     {
         // Get inputs from PlayerInput component
         moveInput = value.Get<Vector2>();
+
+        if (!isAlive) { return; }
     }
 
     void OnJump(InputValue value) 
     {
         // Prevents the player from jumping in the air
+        if (!isAlive) { return; }
         if(!playerFeetCollider.IsTouchingLayers(LayerMask.GetMask("Ground")))  { return; }
         if(value.isPressed)
         {
@@ -89,4 +98,15 @@ public class PlayerMovement : MonoBehaviour
         bool playerHasVerticalSpeed = Mathf.Abs(playerRigidBody.linearVelocity.y) > Mathf.Epsilon;
         playerAnimator.SetBool("IsClimbing", playerHasVerticalSpeed);
     }
+
+    void Die()
+    {
+        if (playerBodyCollider.IsTouchingLayers(LayerMask.GetMask("Enemies", "Hazards")))
+        {
+            isAlive = false;
+            playerAnimator.SetTrigger("Dying");
+            playerRigidBody.velocity = deathKick;
+        }
+    }
+
 }
