@@ -114,7 +114,7 @@ public class PlayerMovement : MonoBehaviour
         {
             isAlive = false;
             playerAnimator.SetTrigger("Dying");
-            playerRigidBody.velocity = deathKick;
+            playerRigidBody.linearVelocity = deathKick;
         }
     }
 
