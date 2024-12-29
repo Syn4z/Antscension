@@ -1,8 +1,16 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System.Collections;
 
 public class PlayerMovement : MonoBehaviour
 {
+    // Dashing variables
+    private bool canDash = true;
+    private bool isDashing;
+    private float dashingPower = 6f;   // how fast the player will dash (speed)
+    private float dashingTime = 0.15f; // how long the player will dash (distance)
+    private float dashCooldown = 1f;   // how long the player will wait to dash again (time)
+
     [SerializeField] float runSpeed = 10f;
     [SerializeField] float jumpSpeed = 8f;
     [SerializeField] float climbSpeed = 5f;
@@ -10,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] GameObject bullet;
     [SerializeField] Transform gun;
     [SerializeField] int maxJumpsInAir = 1; // the numbers of jumps the player can do in the air
+    [SerializeField] TrailRenderer tr;
 
     // This is a bad implementation since if the scale of player is changed
     // we need to change this value os well
@@ -39,6 +48,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         if (!isAlive) { return; }
+        if (isDashing) { return; }
         Run(); 
         FlipSprite();
         ClimbLadder();
@@ -75,6 +85,34 @@ public class PlayerMovement : MonoBehaviour
             playerRigidBody.linearVelocity += new Vector2(0f, jumpSpeed);
             jumpCount++;
         }
+    }
+
+    void OnDash(InputValue value)
+    {
+        if (!isAlive) { return; }
+        if (canDash && value.isPressed)
+        {
+            StartCoroutine(Dash());
+        }
+    }
+
+    // Dash logic
+    private IEnumerator Dash()
+    {
+        canDash = false;
+        isDashing = true;
+        float originalGravity = playerRigidBody.gravityScale;
+        playerRigidBody.gravityScale = 0f;
+        playerRigidBody.linearVelocity = new Vector2(transform.localScale.x * dashingPower, 0f);
+        tr.emitting = true;
+        // Wait for the dashing time
+        yield return new WaitForSeconds(dashingTime);
+        tr.emitting = false;
+        playerRigidBody.gravityScale = originalGravity;
+        isDashing = false;
+        // Wait for the cooldown time
+        yield return new WaitForSeconds(dashCooldown);
+        canDash = true;
     }
 
     void Run() 
