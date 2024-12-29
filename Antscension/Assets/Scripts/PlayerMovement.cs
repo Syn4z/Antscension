@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] Vector2 deathKick = new Vector2(10f, 10f);
     [SerializeField] GameObject bullet;
     [SerializeField] Transform gun;
+    [SerializeField] int maxJumpsInAir = 1; // the numbers of jumps the player can do in the air
 
     // This is a bad implementation since if the scale of player is changed
     // we need to change this value os well
@@ -23,6 +24,7 @@ public class PlayerMovement : MonoBehaviour
     float gravityScaleAtStart;
 
     bool isAlive = true;
+    int jumpCount = 0;
 
     void Start()
     {
@@ -41,6 +43,12 @@ public class PlayerMovement : MonoBehaviour
         FlipSprite();
         ClimbLadder();
         Die();
+
+         // Reset jump count when the player is on the ground
+        if (playerFeetCollider.IsTouchingLayers(LayerMask.GetMask("Ground")))
+        {
+            jumpCount = 0;
+        }
     }
 
     void OnAttack(InputValue value) 
@@ -62,10 +70,10 @@ public class PlayerMovement : MonoBehaviour
     {
         // Prevents the player from jumping in the air
         if (!isAlive) { return; }
-        if(!playerFeetCollider.IsTouchingLayers(LayerMask.GetMask("Ground")))  { return; }
-        if(value.isPressed)
+        if(jumpCount < maxJumpsInAir && value.isPressed)
         {
             playerRigidBody.linearVelocity += new Vector2(0f, jumpSpeed);
+            jumpCount++;
         }
     }
 

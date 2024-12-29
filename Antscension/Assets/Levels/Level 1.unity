@@ -25473,11 +25473,11 @@ PrefabInstance:
       objectReference: {fileID: 1744448612}
     - target: {fileID: 6065083374734494524, guid: fdb20599c9847d294832b8500371f75a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.90080136
+      value: 4.3828216
       objectReference: {fileID: 0}
     - target: {fileID: 6065083374734494524, guid: fdb20599c9847d294832b8500371f75a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.3445597
+      value: 6.34851
       objectReference: {fileID: 0}
     - target: {fileID: 6309724453669186251, guid: fdb20599c9847d294832b8500371f75a, type: 3}
       propertyPath: BoundingShape2D
@@ -25649,6 +25649,10 @@ PrefabInstance:
       propertyPath: bullet
       value: 
       objectReference: {fileID: 2473835216348921674, guid: 9e652a7f54a57aa47afb6b8be17be09b, type: 3}
+    - target: {fileID: 6589471527442624277, guid: 30e94df46180a51468c9490cf1382a25, type: 3}
+      propertyPath: maxJumps
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6589471527442624277, guid: 30e94df46180a51468c9490cf1382a25, type: 3}
       propertyPath: deathKick.x
       value: 20
