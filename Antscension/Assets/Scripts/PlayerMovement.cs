@@ -10,6 +10,8 @@ public class PlayerMovement : MonoBehaviour
     private float dashingPower = 6f;   // how fast the player will dash (speed)
     private float dashingTime = 0.15f; // how long the player will dash (distance)
     private float dashCooldown = 1f;   // how long the player will wait to dash again (time)
+    private bool isInPoisonZone = false;
+    private Coroutine poisonCoroutine;
 
     [SerializeField] float runSpeed = 10f;
     [SerializeField] float jumpSpeed = 8f;
@@ -52,6 +54,7 @@ public class PlayerMovement : MonoBehaviour
         Run(); 
         FlipSprite();
         ClimbLadder();
+        HandlePoisonZone();
         Die();
 
          // Reset jump count when the player is on the ground
@@ -165,4 +168,39 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    void HandlePoisonZone()
+    {
+        if (playerBodyCollider.IsTouchingLayers(LayerMask.GetMask("Poison")))
+        {
+            if (!isInPoisonZone)
+            {
+                isInPoisonZone = true;
+                poisonCoroutine = StartCoroutine(PoisonZoneTimer());
+            }
+        }
+        else
+        {
+            if (isInPoisonZone)
+            {
+                isInPoisonZone = false;
+                if (poisonCoroutine != null)
+                {
+                    StopCoroutine(poisonCoroutine);
+                    poisonCoroutine = null;
+                }
+            }
+        }
+    }
+
+    private IEnumerator PoisonZoneTimer()
+    {
+        yield return new WaitForSeconds(2f); // Time the player can stay in the poison zone
+        if (isInPoisonZone) // Double-check the player is still in the zone
+        {
+            isAlive = false;
+            playerAnimator.SetTrigger("Dying");
+            playerRigidBody.linearVelocity = deathKick;
+            FindObjectOfType<GameSession>().ProcessPlayerDeath();
+        }
+    }
 }

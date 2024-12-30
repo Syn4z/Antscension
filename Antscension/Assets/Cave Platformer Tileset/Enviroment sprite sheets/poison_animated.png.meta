@@ -1,31 +1,24 @@
 fileFormatVersion: 2
-guid: 73398d231c2af4d46bd9cf4c231f519e
-AssetOrigin:
-  serializedVersion: 1
-  productId: 61672
-  packageName: 2D Platfrom Tile Set - Cave
-  packageVersion: 1.2
-  assetPath: Assets/Cave Platformer Tileset/Enviroment sprite sheets/water_animated.png
-  uploadId: 154679
+guid: e25d7f8a6510eb64aa90b3be0f9e4680
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 21300000
-    second: water-animation_0
+      213: -6695759867573392871
+    second: poison_animated_0
   - first:
-      213: 21300002
-    second: water-animation_1
+      213: 3721451223115740558
+    second: poison_animated_1
   - first:
-      213: 21300004
-    second: water-animation_2
+      213: 3816453159559869904
+    second: poison_animated_2
   - first:
-      213: 21300006
-    second: water-animation_3
+      213: 4370960747316905525
+    second: poison_animated_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -49,12 +42,12 @@ TextureImporter:
   generateCubemap: 6
   cubemapConvolution: 0
   seamlessCubemap: 0
-  textureFormat: -1
+  textureFormat: 1
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
     filterMode: 1
-    aniso: 16
+    aniso: 1
     mipBias: 0
     wrapU: 1
     wrapV: 1
@@ -82,9 +75,9 @@ TextureImporter:
   compressionQualitySet: 0
   textureFormatSet: 0
   ignorePngGamma: 0
-  applyGammaDecoding: 1
+  applyGammaDecoding: 0
   swizzle: 50462976
-  cookieLightType: 1
+  cookieLightType: 0
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
@@ -116,13 +109,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: water-animation_0
+      name: poison_animated_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 48
+        y: 47
         width: 80
-        height: 16
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 02305410000000000800000000000000
-      internalID: 21300000
+      spriteID: 91aa8f740e1e313a0800000000000000
+      internalID: -6695759867573392871
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: water-animation_1
+      name: poison_animated_1
       rect:
         serializedVersion: 2
         x: 0
-        y: 32
+        y: 31
         width: 80
-        height: 16
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,20 +146,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 22305410000000000800000000000000
-      internalID: 21300002
+      spriteID: e85b1ca9b2045a330800000000000000
+      internalID: 3721451223115740558
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: water-animation_2
+      name: poison_animated_2
       rect:
         serializedVersion: 2
         x: 0
-        y: 16
+        y: 15
         width: 80
-        height: 16
+        height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -175,20 +168,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 42305410000000000800000000000000
-      internalID: 21300004
+      spriteID: 0d5bb7d9de3c6f430800000000000000
+      internalID: 3816453159559869904
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: water-animation_3
+      name: poison_animated_3
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 80
-        height: 16
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -197,8 +190,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 62305410000000000800000000000000
-      internalID: 21300006
+      spriteID: 536000f24a5c8ac30800000000000000
+      internalID: 4370960747316905525
       vertices: []
       indices: 
       edges: []
@@ -217,10 +210,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      water-animation_0: 21300000
-      water-animation_1: 21300002
-      water-animation_2: 21300004
-      water-animation_3: 21300006
+      poison_animated_0: -6695759867573392871
+      poison_animated_1: 3721451223115740558
+      poison_animated_2: 3816453159559869904
+      poison_animated_3: 4370960747316905525
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
