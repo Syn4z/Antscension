@@ -25463,22 +25463,10 @@ PrefabInstance:
       propertyPath: BoundingShape2D
       value: 
       objectReference: {fileID: 770053634}
-    - target: {fileID: 2705911492724488434, guid: fdb20599c9847d294832b8500371f75a, type: 3}
-      propertyPath: orthographic size
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 4101037594664143936, guid: fdb20599c9847d294832b8500371f75a, type: 3}
       propertyPath: Target.TrackingTarget
       value: 
       objectReference: {fileID: 1744448612}
-    - target: {fileID: 6065083374734494524, guid: fdb20599c9847d294832b8500371f75a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.90080136
-      objectReference: {fileID: 0}
-    - target: {fileID: 6065083374734494524, guid: fdb20599c9847d294832b8500371f75a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 6.3445597
-      objectReference: {fileID: 0}
     - target: {fileID: 6309724453669186251, guid: fdb20599c9847d294832b8500371f75a, type: 3}
       propertyPath: BoundingShape2D
       value: 
@@ -25640,22 +25628,6 @@ PrefabInstance:
     - target: {fileID: 5702939105821192870, guid: 30e94df46180a51468c9490cf1382a25, type: 3}
       propertyPath: m_Name
       value: Ant (Player)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5702939105821192870, guid: 30e94df46180a51468c9490cf1382a25, type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 6589471527442624277, guid: 30e94df46180a51468c9490cf1382a25, type: 3}
-      propertyPath: bullet
-      value: 
-      objectReference: {fileID: 2473835216348921674, guid: 9e652a7f54a57aa47afb6b8be17be09b, type: 3}
-    - target: {fileID: 6589471527442624277, guid: 30e94df46180a51468c9490cf1382a25, type: 3}
-      propertyPath: deathKick.x
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 6589471527442624277, guid: 30e94df46180a51468c9490cf1382a25, type: 3}
-      propertyPath: deathKick.y
-      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
