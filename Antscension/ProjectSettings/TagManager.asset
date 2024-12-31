@@ -60,11 +60,11 @@ TagManager:
   - name: Enemies
     uniqueID: 2896254151
     locked: 0
-  - name: Poison
-    uniqueID: 3224823283
-    locked: 0
   - name: Player
     uniqueID: 1701934657
+    locked: 0
+  - name: Poison
+    uniqueID: 3224823283
     locked: 0
   m_RenderingLayers:
   - Default
