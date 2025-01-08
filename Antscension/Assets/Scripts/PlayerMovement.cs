@@ -21,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] Transform gun;
     [SerializeField] int maxJumpsInAir = 1; // the numbers of jumps the player can do in the air
     [SerializeField] TrailRenderer tr;
+    [SerializeField] float interactRadius = 1f;
 
     // This is a bad implementation since if the scale of player is changed
     // we need to change this value os well
@@ -62,6 +63,32 @@ public class PlayerMovement : MonoBehaviour
         {
             jumpCount = 0;
         }
+    }
+
+    void OnClaws(InputValue value) 
+    {
+        if (!isAlive) { return; }
+
+        bool isPressed = value.isPressed;
+
+        if (isPressed)
+        {
+            playerAnimator.SetTrigger("Attack");
+            Collider2D[] hitColliders = Physics2D.OverlapCircleAll(transform.position, interactRadius);
+            foreach (var hitCollider in hitColliders)
+            {
+                if (hitCollider.CompareTag("Enemy"))
+                {
+                    Destroy(hitCollider.gameObject);
+                    break;
+                }
+            }
+        }
+    }
+
+    void ResetAttackTrigger()
+    {
+        playerAnimator.ResetTrigger("Attack");
     }
 
     void OnAttack(InputValue value) 
