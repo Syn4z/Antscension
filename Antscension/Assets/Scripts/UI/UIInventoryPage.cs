@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 using System.Collections;
+using System;
 
 public class UIInventoryPage : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class UIInventoryPage : MonoBehaviour
     [SerializeField] private UIInventoryDescription itemDescription;
 
     List <UIInventoryItem> listOfUIItems = new List<UIInventoryItem>();
+
+    public event Action<int> OnDescriptionRequested;
 
     public Sprite image;
     public int quantity;
@@ -35,6 +38,22 @@ public class UIInventoryPage : MonoBehaviour
         }
     }
 
+    internal void UpdateDescription(int itemIndex, Sprite itemImage, string name, string description)
+    {
+        itemDescription.SetDescription(itemImage, name, description);
+        DeselectAllItems();
+        listOfUIItems[itemIndex].Select();
+    }
+    
+    public void UpdateData(int itemIndex,
+            Sprite itemImage, int itemQuantity)
+    {
+        if (listOfUIItems.Count > itemIndex)
+        {
+            listOfUIItems[itemIndex].SetData(itemImage, itemQuantity);
+        }
+    }
+
     private void HandleShowItemActions(UIInventoryItem obj)
     {
 
@@ -57,7 +76,10 @@ public class UIInventoryPage : MonoBehaviour
 
     private void HandleItemSelection(UIInventoryItem inventoryItemUI)
     {
-        itemDescription.SetDescription(image, title, description);
+        int index = listOfUIItems.IndexOf(inventoryItemUI);
+        if (index == -1)
+            return;
+        OnDescriptionRequested?.Invoke(index);
     }
 
     public void Show()
@@ -68,8 +90,23 @@ public class UIInventoryPage : MonoBehaviour
         listOfUIItems[0].SetData(image, quantity);
     }
 
+    public void ResetSelection()
+    {
+        itemDescription.ResetDescription();
+        DeselectAllItems();
+    }
+
+    private void DeselectAllItems()
+    {
+        foreach (UIInventoryItem item in listOfUIItems)
+        {
+            item.Deselect();
+        }
+    }
+
     public void Hide()
     {
         gameObject.SetActive(false);
+        DeselectAllItems();
     }
 }
