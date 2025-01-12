@@ -1088,8 +1088,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b4958eca865d6c45a8ae10497c1691c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemPrefab: {fileID: 3157230896855495122, guid: 6bbc6dabe526e9d44a66067834b26c1c, type: 3}
+  itemPrefab: {fileID: 5437917068691286427, guid: 6bbc6dabe526e9d44a66067834b26c1c, type: 3}
   contentPanel: {fileID: 1216847522976388929}
+  itemDescription: {fileID: 2804114761949631808}
+  image: {fileID: 6365927888270974308, guid: 39a0362bb3def0f4da142f5a3ba5113f, type: 3}
+  quantity: 1
+  title: Acid Spit
+  description: Acid Spitocik
 --- !u!1 &7078103746670932860
 GameObject:
   m_ObjectHideFlags: 0
@@ -1139,6 +1144,7 @@ GameObject:
   - component: {fileID: 4874964076595194367}
   - component: {fileID: 546040870912091807}
   - component: {fileID: 1593889648686993885}
+  - component: {fileID: 2804114761949631808}
   m_Layer: 5
   m_Name: InventoryDescription
   m_TagString: Untagged
@@ -1251,6 +1257,21 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &2804114761949631808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7947598709436473255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 107eff03f4d6e04478927e2bf6cbcf3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemImage: {fileID: 1937369910732994055}
+  title: {fileID: 4853378450785466632}
+  description: {fileID: 1972117777248071462}
 --- !u!1 &8447446236800362894
 GameObject:
   m_ObjectHideFlags: 0
