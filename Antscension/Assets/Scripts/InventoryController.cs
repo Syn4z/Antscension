@@ -3,13 +3,12 @@ using UnityEngine;
 public class InventoryController : MonoBehaviour
 {
     [SerializeField] private UIInventoryPage inventoryUI;
-
-    public int inventorySize = 1;
+    
+    public int inventorySize = 10;
 
     public void Start()
     {
         inventoryUI.InitializeInventoryUI(inventorySize);
-        inventoryUI.Hide();
     }
 
     public void Update()
