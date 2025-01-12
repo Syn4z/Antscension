@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc67d9717e50f3a44ac299cf7223a2b7, type: 3}
+  m_Name: Acid Spit
+  m_EditorClassIdentifier: 
+  <IsStackable>k__BackingField: 0
+  <MaxStackSize>k__BackingField: 1
+  <Name>k__BackingField: Acid Spit
+  <Description>k__BackingField: A range attack that uses the ant's poisonous gland
+    to damage its enemies. Performed by using LMB.
+  <ItemImage>k__BackingField: {fileID: 569863634764901415, guid: 39a0362bb3def0f4da142f5a3ba5113f, type: 3}

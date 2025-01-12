@@ -231,6 +231,7 @@ MonoBehaviour:
   gun: {fileID: 332871218446425551}
   maxJumpsInAir: 1
   tr: {fileID: 272463571629492764}
+  interactRadius: 1
 --- !u!61 &4359543128967141234
 BoxCollider2D:
   m_ObjectHideFlags: 0
