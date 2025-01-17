@@ -6,10 +6,15 @@ public class FlyingEnemy : MonoBehaviour
     private GameObject player;
     public bool chase = false;
     public Transform startingPoint;
+    public float idleMoveRange = 0.5f; // Range of idle movement
+    public float idleMoveSpeed = 2f;  // Speed of idle movement
+
+    private Vector2 idleOffset;       // Offset for idle movement
 
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        idleOffset = Vector2.zero;
     }
 
     void Update()
@@ -18,13 +23,13 @@ public class FlyingEnemy : MonoBehaviour
         {
             return;
         }
-        if (chase == true)
+        if (chase)
         {
             ChasePlayer();
         }
         else
         {
-            ReturnStartPoint();
+            ReturnStartPointWithIdleMovement();
         }
         Flip();
     }
@@ -39,13 +44,19 @@ public class FlyingEnemy : MonoBehaviour
         }
         else
         {
-           speed = 2f; 
+            speed = 2f; 
         }
     }
 
-    private void ReturnStartPoint()
+    private void ReturnStartPointWithIdleMovement()
     {
-        transform.position = Vector2.MoveTowards(transform.position, startingPoint.position, speed * Time.deltaTime);
+        // Generate a slight oscillation
+        idleOffset.x = Mathf.Sin(Time.time * idleMoveSpeed) * idleMoveRange;
+        idleOffset.y = Mathf.Cos(Time.time * idleMoveSpeed) * idleMoveRange;
+
+        // Apply the oscillation to the position
+        Vector2 targetPosition = (Vector2)startingPoint.position + idleOffset;
+        transform.position = Vector2.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
     }
 
     private void Flip()
