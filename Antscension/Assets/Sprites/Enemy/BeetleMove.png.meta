@@ -1,67 +1,55 @@
 fileFormatVersion: 2
-guid: 495ba28ef81697041b229ecd9c83d10a
+guid: aa4d549861bf28966b91a32950f9abc3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 371397598370140140
-    second: buttons_2x_0
+      213: 3301814176316817368
+    second: BeetleMove_0
   - first:
-      213: -1922984276000229685
-    second: buttons_2x_1
+      213: 3886913951836277831
+    second: BeetleMove_1
   - first:
-      213: 5099423060410739401
-    second: buttons_2x_2
+      213: -5949412103197232599
+    second: BeetleMove_2
   - first:
-      213: 2886441492210748926
-    second: buttons_2x_3
+      213: -6072124039633877317
+    second: BeetleMove_3
   - first:
-      213: -3896322187214767633
-    second: buttons_2x_4
+      213: 8606294505560144630
+    second: BeetleMove_4
   - first:
-      213: 6984324063025680785
-    second: buttons_2x_5
+      213: -6019875582119635767
+    second: BeetleMove_5
   - first:
-      213: -7038092542697505667
-    second: buttons_2x_6
+      213: -5048577910020285096
+    second: BeetleMove_6
   - first:
-      213: -3890263123809191945
-    second: buttons_2x_7
+      213: -8892443600754002395
+    second: BeetleMove_7
   - first:
-      213: -2405483149181316690
-    second: buttons_2x_8
+      213: 984645546390310914
+    second: BeetleMove_8
   - first:
-      213: -3616969787688080744
-    second: buttons_2x_9
+      213: 4608537421171935048
+    second: BeetleMove_9
   - first:
-      213: 3842494754771230085
-    second: buttons_2x_10
+      213: 4942849810573559932
+    second: BeetleMove_10
   - first:
-      213: -3038955478491181810
-    second: buttons_2x_11
+      213: 6779269788488812842
+    second: BeetleMove_11
   - first:
-      213: -6198941022238029467
-    second: buttons_2x_12
+      213: -6511286009908575064
+    second: BeetleMove_12
   - first:
-      213: 8268058260202110986
-    second: buttons_2x_13
+      213: -1428355933962015087
+    second: BeetleMove_13
   - first:
-      213: -9090833433720455265
-    second: buttons_2x_14
+      213: -6421752655104874162
+    second: BeetleMove_14
   - first:
-      213: 5001588161623202166
-    second: buttons_2x_15
-  - first:
-      213: 6224075022101927021
-    second: buttons_2x_16
-  - first:
-      213: 1616838926428502323
-    second: buttons_2x_17
-  - first:
-      213: 4063458435842086877
-    second: buttons_2x_18
-  - first:
-      213: 968314839498675944
-    second: buttons_2x_19
+      213: -559612029383561433
+    second: BeetleMove_15
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -170,13 +158,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: buttons_2x_0
+      name: BeetleMove_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 1
-        width: 30
-        height: 30
+        x: 7
+        y: 103
+        width: 18
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -185,20 +173,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cef0941e528772500800000000000000
-      internalID: 371397598370140140
+      spriteID: 8df76b5ef7662dd20800000000000000
+      internalID: 3301814176316817368
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: buttons_2x_1
+      name: BeetleMove_1
       rect:
         serializedVersion: 2
-        x: 33
-        y: 1
-        width: 30
-        height: 28
+        x: 39
+        y: 104
+        width: 18
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -207,20 +195,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bc638584dff2055e0800000000000000
-      internalID: -1922984276000229685
+      spriteID: 74c06bb35a711f530800000000000000
+      internalID: 3886913951836277831
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: buttons_2x_2
+      name: BeetleMove_2
       rect:
         serializedVersion: 2
-        x: 65
-        y: 1
-        width: 46
-        height: 30
+        x: 69
+        y: 104
+        width: 22
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,20 +217,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9caa73b614ac4c640800000000000000
-      internalID: 5099423060410739401
+      spriteID: 922f486a6317f6da0800000000000000
+      internalID: -5949412103197232599
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: buttons_2x_3
+      name: BeetleMove_3
       rect:
         serializedVersion: 2
-        x: 113
-        y: 1
-        width: 46
-        height: 28
+        x: 103
+        y: 103
+        width: 18
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -251,19 +239,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: efd8b208e33be0820800000000000000
-      internalID: 2886441492210748926
+      spriteID: bb643818b5b7bbba0800000000000000
+      internalID: -6072124039633877317
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: buttons_2x_4
+      name: BeetleMove_4
       rect:
         serializedVersion: 2
-        x: 161
-        y: 15
-        width: 14
+        x: 4
+        y: 71
+        width: 21
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -273,19 +261,85 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fe937944d9b7de9c0800000000000000
-      internalID: -3896322187214767633
+      spriteID: 6fafe443143bf6770800000000000000
+      internalID: 8606294505560144630
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: buttons_2x_5
+      name: BeetleMove_5
       rect:
         serializedVersion: 2
-        x: 177
-        y: 15
-        width: 14
+        x: 36
+        y: 72
+        width: 22
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c416bf7d0b157ca0800000000000000
+      internalID: -6019875582119635767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BeetleMove_6
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 72
+        width: 23
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85d5b5ca329dfe9b0800000000000000
+      internalID: -5048577910020285096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BeetleMove_7
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 71
+        width: 22
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 526bcd7c8a1b79480800000000000000
+      internalID: -8892443600754002395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BeetleMove_8
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 39
+        width: 21
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -295,20 +349,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 191dbd41bbd4de060800000000000000
-      internalID: 6984324063025680785
+      spriteID: 200d34658e92aad00800000000000000
+      internalID: 984645546390310914
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: buttons_2x_6
+      name: BeetleMove_9
       rect:
         serializedVersion: 2
-        x: 193
-        y: 15
-        width: 6
-        height: 16
+        x: 38
+        y: 40
+        width: 22
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -317,20 +371,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d7c70303f1ca35e90800000000000000
-      internalID: -7038092542697505667
+      spriteID: 8474c031e50d4ff30800000000000000
+      internalID: 4608537421171935048
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: buttons_2x_7
+      name: BeetleMove_10
       rect:
         serializedVersion: 2
-        x: 201
-        y: 15
-        width: 6
-        height: 16
+        x: 69
+        y: 40
+        width: 23
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -339,20 +393,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7f73d86ec42030ac0800000000000000
-      internalID: -3890263123809191945
+      spriteID: c780851e6b7889440800000000000000
+      internalID: 4942849810573559932
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: buttons_2x_8
+      name: BeetleMove_11
       rect:
         serializedVersion: 2
-        x: 209
-        y: 15
-        width: 14
-        height: 16
+        x: 102
+        y: 39
+        width: 22
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -361,20 +415,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ea11cd312d10e9ed0800000000000000
-      internalID: -2405483149181316690
+      spriteID: a29c96b54fdc41e50800000000000000
+      internalID: 6779269788488812842
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: buttons_2x_9
+      name: BeetleMove_12
       rect:
         serializedVersion: 2
-        x: 225
-        y: 27
-        width: 14
-        height: 5
+        x: 6
+        y: 9
+        width: 20
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -383,20 +437,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 89a28814421fdcdc0800000000000000
-      internalID: -3616969787688080744
+      spriteID: 8a4cd6c4fd343a5a0800000000000000
+      internalID: -6511286009908575064
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: buttons_2x_10
+      name: BeetleMove_13
       rect:
         serializedVersion: 2
-        x: 225
-        y: 21
-        width: 14
-        height: 6
+        x: 37
+        y: 10
+        width: 22
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -405,20 +459,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 58dd07dfe98435530800000000000000
-      internalID: 3842494754771230085
+      spriteID: 19e6f5788d57d2ce0800000000000000
+      internalID: -1428355933962015087
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: buttons_2x_11
+      name: BeetleMove_14
       rect:
         serializedVersion: 2
-        x: 241
-        y: 15
-        width: 14
-        height: 16
+        x: 68
+        y: 10
+        width: 24
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -427,20 +481,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e0d4e48e71673d5d0800000000000000
-      internalID: -3038955478491181810
+      spriteID: e496d0debf951e6a0800000000000000
+      internalID: -6421752655104874162
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: buttons_2x_12
+      name: BeetleMove_15
       rect:
         serializedVersion: 2
-        x: 159
-        y: 0
-        width: 14
-        height: 15
+        x: 101
+        y: 9
+        width: 22
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -449,162 +503,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 569c7e1dbffe8f9a0800000000000000
-      internalID: -6198941022238029467
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: buttons_2x_13
-      rect:
-        serializedVersion: 2
-        x: 173
-        y: 0
-        width: 8
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a00c49d7e2b0eb270800000000000000
-      internalID: 8268058260202110986
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: buttons_2x_14
-      rect:
-        serializedVersion: 2
-        x: 197
-        y: 1
-        width: 10
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f9ff8d6482fd6d180800000000000000
-      internalID: -9090833433720455265
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: buttons_2x_15
-      rect:
-        serializedVersion: 2
-        x: 209
-        y: 1
-        width: 10
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6799956fee5396540800000000000000
-      internalID: 5001588161623202166
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: buttons_2x_16
-      rect:
-        serializedVersion: 2
-        x: 225
-        y: 15
-        width: 14
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d6454cb814b506650800000000000000
-      internalID: 6224075022101927021
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: buttons_2x_17
-      rect:
-        serializedVersion: 2
-        x: 225
-        y: 3
-        width: 14
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3397bccef6a207610800000000000000
-      internalID: 1616838926428502323
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: buttons_2x_18
-      rect:
-        serializedVersion: 2
-        x: 181
-        y: 0
-        width: 12
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: dd79ee31bed446830800000000000000
-      internalID: 4063458435842086877
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: buttons_2x_19
-      rect:
-        serializedVersion: 2
-        x: 241
-        y: 1
-        width: 14
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8e6de075735207d00800000000000000
-      internalID: 968314839498675944
+      spriteID: 72fae8003dbdb38f0800000000000000
+      internalID: -559612029383561433
       vertices: []
       indices: 
       edges: []
@@ -623,26 +523,22 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      buttons_2x_0: 371397598370140140
-      buttons_2x_1: -1922984276000229685
-      buttons_2x_10: 3842494754771230085
-      buttons_2x_11: -3038955478491181810
-      buttons_2x_12: -6198941022238029467
-      buttons_2x_13: 8268058260202110986
-      buttons_2x_14: -9090833433720455265
-      buttons_2x_15: 5001588161623202166
-      buttons_2x_16: 6224075022101927021
-      buttons_2x_17: 1616838926428502323
-      buttons_2x_18: 4063458435842086877
-      buttons_2x_19: 968314839498675944
-      buttons_2x_2: 5099423060410739401
-      buttons_2x_3: 2886441492210748926
-      buttons_2x_4: -3896322187214767633
-      buttons_2x_5: 6984324063025680785
-      buttons_2x_6: -7038092542697505667
-      buttons_2x_7: -3890263123809191945
-      buttons_2x_8: -2405483149181316690
-      buttons_2x_9: -3616969787688080744
+      BeetleMove_0: 3301814176316817368
+      BeetleMove_1: 3886913951836277831
+      BeetleMove_10: 4942849810573559932
+      BeetleMove_11: 6779269788488812842
+      BeetleMove_12: -6511286009908575064
+      BeetleMove_13: -1428355933962015087
+      BeetleMove_14: -6421752655104874162
+      BeetleMove_15: -559612029383561433
+      BeetleMove_2: -5949412103197232599
+      BeetleMove_3: -6072124039633877317
+      BeetleMove_4: 8606294505560144630
+      BeetleMove_5: -6019875582119635767
+      BeetleMove_6: -5048577910020285096
+      BeetleMove_7: -8892443600754002395
+      BeetleMove_8: 984645546390310914
+      BeetleMove_9: 4608537421171935048
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
