@@ -19,4 +19,8 @@ MonoBehaviour:
     item: {fileID: 11400000, guid: b1e7d2c81b401d04c8916479ab94290b, type: 2}
   - quantity: 1
     item: {fileID: 11400000, guid: 23c92d6ee1bb4ee48b6fddd3a93a7608, type: 2}
-  <Size>k__BackingField: 3
+  - quantity: 1
+    item: {fileID: 11400000, guid: d94d9a844fc7a634c9844b108d69c9d1, type: 2}
+  - quantity: 1
+    item: {fileID: 11400000, guid: 7d0a8512f39cd7c40aecd05cd4c87b6c, type: 2}
+  <Size>k__BackingField: 5
