@@ -6,9 +6,13 @@ public class GameSession : MonoBehaviour
 {
     [SerializeField] int playerLives = 3;
     [SerializeField] int coins = 0;
+    [SerializeField] int jumps = 2;
 
     [SerializeField] TextMeshProUGUI livesText;
     [SerializeField] TextMeshProUGUI coinText;
+    [SerializeField] TextMeshProUGUI jumpsText;
+
+    [SerializeField] int extraJumps = 0; // New variable to track extra jumps
 
     void Awake()
     {
@@ -21,13 +25,21 @@ public class GameSession : MonoBehaviour
         {
             DontDestroyOnLoad(gameObject);
         }
-
     }
 
     void Start()
     {
         livesText.text = playerLives.ToString();
         coinText.text = coins.ToString();
+        jumpsText.text = jumps.ToString();
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.U))
+        {
+            UpgradeJump();
+        }
     }
 
     public void ProcessPlayerDeath()
@@ -40,11 +52,11 @@ public class GameSession : MonoBehaviour
         {
             ResetGameSession();
         }
-    } 
+    }
 
     public void AddToCoins(int coinsToAdd)
     {
-        coins+= coinsToAdd;
+        coins += coinsToAdd;
         coinText.text = coins.ToString();
     }
 
@@ -61,5 +73,45 @@ public class GameSession : MonoBehaviour
         FindObjectOfType<ScenePersist>().ResetScenePersist();
         SceneManager.LoadScene(0);
         Destroy(gameObject);
+    }
+
+    public void DecrementJumps()
+    {
+        if (jumps > 0)
+        {
+            Debug.Log("Jumps initial: " + jumps);
+            jumps -= 1;
+            Debug.Log("Jumps decremented to: " + jumps);
+            jumpsText.text = jumps.ToString();
+        }
+    }
+
+    public void ResetJumps()
+    {
+        jumps = 2 + extraJumps;
+        jumpsText.text = jumps.ToString();
+        //Debug.Log("Jumps reset to: " + jumps);
+    }
+
+    public void UpgradeJump()
+    {
+        Debug.Log(coins);
+        Debug.Log("Button linked to: " + gameObject.name);
+        if (coins >= 3)
+        {
+            coins -= 3;
+            extraJumps++;
+            coinText.text = coins.ToString();
+            FindObjectOfType<PlayerMovement>().UpdateMaxJumps(extraJumps);
+ 
+            jumps++;
+            jumpsText.text = jumps.ToString();
+            
+            Debug.Log("Upgraded! Extra jumps: " + extraJumps);
+        }
+        else
+        {
+            Debug.Log("Not enough coins to upgrade.");
+        }
     }
 }

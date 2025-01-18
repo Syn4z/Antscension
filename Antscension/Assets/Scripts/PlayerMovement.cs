@@ -63,6 +63,12 @@ public class PlayerMovement : MonoBehaviour
         {
             jumpCount = 0;
         }
+
+        if (jumpCount == maxJumpsInAir)
+        {
+            Debug.Log("Resetting jumps");
+            StartCoroutine(WaitAndResetJumps());
+        }
     }
 
     void OnClaws(InputValue value) 
@@ -114,7 +120,19 @@ public class PlayerMovement : MonoBehaviour
         {
             playerRigidBody.linearVelocity += new Vector2(0f, jumpSpeed);
             jumpCount++;
+            FindObjectOfType<GameSession>().DecrementJumps();
         }
+    }
+
+    public void UpdateMaxJumps(int extraJumps)
+    {
+        maxJumpsInAir = 1 + extraJumps;
+    }
+
+    private IEnumerator WaitAndResetJumps()
+    {
+        yield return new WaitForSeconds(0.75f); // Wait for 0.5 seconds
+        FindObjectOfType<GameSession>().ResetJumps();
     }
 
     void OnDash(InputValue value)
