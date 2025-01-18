@@ -131,7 +131,7 @@ public class PlayerMovement : MonoBehaviour
 
     private IEnumerator WaitAndResetJumps()
     {
-        yield return new WaitForSeconds(0.75f); // Wait for 0.5 seconds
+        yield return new WaitForSeconds(0.75f); // Wait for 0.75 seconds
         FindObjectOfType<GameSession>().ResetJumps();
     }
 
@@ -140,8 +140,21 @@ public class PlayerMovement : MonoBehaviour
         if (!isAlive) { return; }
         if (canDash && value.isPressed)
         {
+            FindObjectOfType<GameSession>().DecrementDash();
             StartCoroutine(Dash());
+            StartCoroutine(WaitAndResetDash());
         }
+    }
+
+    private IEnumerator WaitAndResetDash()
+    {
+        yield return new WaitForSeconds(0.75f); // Wait for 0.75 seconds
+        FindObjectOfType<GameSession>().ResetDash();
+    }
+
+    public void UpgradeDash()
+    {
+        dashingTime += 0.3f;
     }
 
     // Dash logic
