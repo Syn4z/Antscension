@@ -66,7 +66,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (jumpCount == maxJumpsInAir)
         {
-            Debug.Log("Resetting jumps");
+            // Debug.Log("Resetting jumps");
             StartCoroutine(WaitAndResetJumps());
         }
     }

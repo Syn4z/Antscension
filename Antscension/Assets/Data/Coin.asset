@@ -15,6 +15,11 @@ MonoBehaviour:
   <IsStackable>k__BackingField: 0
   <MaxStackSize>k__BackingField: 1
   <Name>k__BackingField: Coin
-  <Description>k__BackingField: A small coin offering the possibility to upgrade
+  <Description>k__BackingField: 'A small coin offering the possibility to upgrade
     your abilities.
+
+    Press U to update your jump.
+
+    Press J to update your
+    dash.'
   <ItemImage>k__BackingField: {fileID: -7628239090933368438, guid: 1246a5992e209fd75b82180126d5c2aa, type: 3}

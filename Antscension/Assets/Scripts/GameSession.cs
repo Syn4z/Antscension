@@ -1,9 +1,13 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using System.Collections;
 
 public class GameSession : MonoBehaviour
 {
+    private Color greenColor = new Color(201f / 255f, 255f / 255f, 67f / 255f, 1f); 
+    private Color redColor = new Color(255f / 255f, 94f / 255f, 66f / 255f, 1f);
+
     [SerializeField] int playerLives = 3;
     [SerializeField] int coins = 0;
     [SerializeField] int jumps = 2;
@@ -13,6 +17,9 @@ public class GameSession : MonoBehaviour
     [SerializeField] TextMeshProUGUI coinText;
     [SerializeField] TextMeshProUGUI jumpsText;
     [SerializeField] TextMeshProUGUI dashText;
+    [SerializeField] TextMeshProUGUI upgradeText;
+    [SerializeField] AudioSource upgradeSound;
+    [SerializeField] AudioSource failSound;
 
     [SerializeField] int extraJumps = 0; // New variable to track extra jumps
 
@@ -35,6 +42,8 @@ public class GameSession : MonoBehaviour
         coinText.text = coins.ToString();
         jumpsText.text = jumps.ToString();
         dashText.text = dash.ToString();
+        upgradeText.text = "";
+        upgradeText.color = greenColor;
     }
 
     void Update()
@@ -106,6 +115,11 @@ public class GameSession : MonoBehaviour
             extraJumps++;
             coinText.text = coins.ToString();
             FindObjectOfType<PlayerMovement>().UpdateMaxJumps(extraJumps);
+
+            upgradeText.color = greenColor;
+            upgradeText.text = "Jump count upgraded!";
+            upgradeSound.Play();
+            StartCoroutine(ClearMessageAfterDelay(3f));
  
             jumps++;
             jumpsText.text = jumps.ToString();
@@ -113,7 +127,17 @@ public class GameSession : MonoBehaviour
         else
         {
             Debug.Log("Not enough coins to upgrade.");
+            upgradeText.color = redColor;
+            upgradeText.text = "Not enough coins \n(3 required)";
+            failSound.Play();
+            StartCoroutine(ClearMessageAfterDelay(3f));
         }
+    }
+
+    private IEnumerator ClearMessageAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        upgradeText.text = "";
     }
 
     public void DecrementDash()
@@ -138,10 +162,19 @@ public class GameSession : MonoBehaviour
             coins -= 3;
             coinText.text = coins.ToString();
             FindObjectOfType<PlayerMovement>().UpgradeDash();
+
+            upgradeText.color = greenColor;
+            upgradeText.text = "Dash distance upgraded!";
+            upgradeSound.Play();
+            StartCoroutine(ClearMessageAfterDelay(3f));
         }
         else
         {
             Debug.Log("Not enough coins to upgrade.");
+            upgradeText.color = redColor;
+            upgradeText.text = "Not enough coins \n(3 required)";
+            failSound.Play();
+            StartCoroutine(ClearMessageAfterDelay(3f));
         }
     }
 }
