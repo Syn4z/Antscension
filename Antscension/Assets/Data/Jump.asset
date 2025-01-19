@@ -10,16 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bc67d9717e50f3a44ac299cf7223a2b7, type: 3}
-  m_Name: Coin
+  m_Name: Jump
   m_EditorClassIdentifier: 
   <IsStackable>k__BackingField: 0
   <MaxStackSize>k__BackingField: 1
-  <Name>k__BackingField: Coin
-  <Description>k__BackingField: 'A small coin offering the possibility to upgrade
-    your abilities.
-
-    Press U to update your jump.
-
-    Press J to update your
-    dash.'
-  <ItemImage>k__BackingField: {fileID: -7628239090933368438, guid: 1246a5992e209fd75b82180126d5c2aa, type: 3}
+  <Name>k__BackingField: Jump
+  <Description>k__BackingField: "Jump in the air. Look at the bottom right (arrow
+    up) to see how many charges you have. \nPerformed by pressing Space. "
+  <ItemImage>k__BackingField: {fileID: 5427269418616366091, guid: a6822bc516edec74b8609b818fa750a3, type: 3}
